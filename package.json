@@ -1,6 +1,6 @@
 {
-  "name": "wenprise-purgecss-whitelist",
-  "version": "1.0.1",
+  "name": "@wenprise/purgecss-whitelist",
+  "version": "1.0.3",
   "description": "purgecss with wordpress",
   "main": "index.js",
   "scripts": {

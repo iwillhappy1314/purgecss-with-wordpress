@@ -10,9 +10,9 @@ Wordpress CMS.
 
 You need to install [purgecss](https://github.com/FullHuman/purgecss) first.
 
-Install `purgecss-with-wordpress`:
+Install `wenprise-purgecss-whitelist`:
 ```sh
-npm i --save-dev purgecss-with-wordpress
+npm i --save-dev wenprise-purgecss-whitelist
 ```
 
 ## Usage
@@ -20,13 +20,19 @@ npm i --save-dev purgecss-with-wordpress
 ```js
 
 import Purgecss from 'purgecss'
-import purgecssWordpress from 'purgecss-with-wordpress'
+import purgecssWhiteList from 'wenprise-purgecss-whitelist'
 
 const purgeCss = new Purgecss({
   content: ['**/*.html'],
   css: ['**/*.css'],
-  whitelist: purgecssWordpress.whitelist,
-  whitelistPatterns: purgecssWordpress.whitelistPatterns
+  whitelist: purgecssWhiteList.whitelist.concat([
+      'ln-letters',
+      'letterCountShow',
+  ]),
+  whitelistPatterns: purgecssWhiteList.whitelistPatterns.concat([
+      /ln-*/,
+      /listNav*/,
+  ])
 })
 const result = purgecss.purge()
 ```
@@ -35,12 +41,12 @@ If you have additional classes you want to include in either of the `whitelist` 
 
 ```js
 whitelist: [
-  ...purgecssWordpress.whitelist,
+  ...purgecssWhiteList.whitelist,
   'red',
   'blue',
 ],
 whitelistPatterns: [
-  ...purgecssWordpress.whitelistPatterns,
+  ...purgecssWhiteList.whitelistPatterns,
   /^red/,
   /blue$/,
 ]
