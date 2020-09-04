@@ -1,6 +1,6 @@
 {
-  "name": "@wenprise/purgecss-whitelist",
-  "version": "1.0.3",
+  "name": "@wenprise/purgecss-with-wordpress",
+  "version": "1.0.4",
   "description": "purgecss with wordpress",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FullHuman/purgecss-with-wordpress.git"
+    "url": "git+https://github.com/iwillhappy1314/wenprise-purgecss-whitelist.git"
   },
   "keywords": [
     "purgecss",
     "wordpress",
-    "remove",
-    "unused",
     "css"
   ],
-  "author": "Ffloriel",
+  "author": "Ffloriel,Amos Lee",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FullHuman/purgecss-with-wordpress/issues"
+    "url": "https://github.com/iwillhappy1314/wenprise-purgecss-whitelist/issues"
   },
-  "homepage": "https://github.com/FullHuman/purgecss-with-wordpress#readme"
+  "homepage": "https://github.com/iwillhappy1314/wenprise-purgecss-whitelist#readme"
 }
